@@ -1,14 +1,14 @@
 @import 'variables';
 
 @media(max-width: 768px) {
-    .about_collapses {
+    .about_dropdown {
         width: 98% !important;
         margin-top: 1.7rem !important;
     }
 }
 
 .about {
-    &_collapses {
+    &_dropdown {
         display: flex;
         flex-direction: column;
         align-items: center;

@@ -1,4 +1,5 @@
 import React from 'react';
+import {useParams } from 'react-router-dom';
 import housings from '../../API/logements.json';
 import Collapse from '../Layout/Collapse';
 import Gallery from '../Layout/Slides';
@@ -6,7 +7,8 @@ import RatingScale from './RatingScale';
 
 const HousingPage = () => {
 
-    const housing = housings.find(housing => housing.id)
+    const { id } = useParams()
+    const housing = housings.find(housing => housing.id === id)
 
     return (
         <section key={housing.id} className='house_page'>
@@ -36,14 +38,14 @@ const HousingPage = () => {
                 </article>
             </header>
 
-            <article className='house_page_collapses'>
-                <div className='house_page_collapses_content'>
+            <article className='house_page_dropdown'>
+                <div className='house_page_dropdown_content'>
                     <Collapse
                         title='Description'
                         content={housing.description}
                     />
                 </div>
-                <div className='house_page_collapses_content'>
+                <div className='house_page_dropdown_content'>
                     <Collapse
                         title='Équipements'
                         content={housing.equipments.map((equipment, i) => (

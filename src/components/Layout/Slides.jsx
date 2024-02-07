@@ -12,7 +12,7 @@ const Gallery = (props) => {
         if(!slideshowImg){
             return 0;
         }
-        return slideshowImg.width;
+        return slideshowImg.length;
     }
 
     const onNext = () => {
