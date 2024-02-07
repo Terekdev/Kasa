@@ -1,5 +1,5 @@
 import React from 'react';
-import {useParams } from 'react-router-dom';
+import {NavLink, useParams } from 'react-router-dom';
 import housings from '../../API/logements.json';
 import Collapse from '../Layout/Collapse';
 import Gallery from '../Layout/Slides';
