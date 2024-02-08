@@ -12,7 +12,7 @@ const Gallery = (props) => {
         if(!slideshowImg){
             return 0;
         }
-        return slideshowImg.length;
+        return slideshowImg.width;
     }
 
     const onNext = () => {
@@ -44,7 +44,7 @@ const Gallery = (props) => {
                 <i className='slideshow_controls_chevron' onClick={onPrev}>{angleLeft}</i>
                 <i className='slideshow_controls_chevron' onClick={onNext}>{angleRight}</i>
             </div>
-            <div className='slideshow_index'>{slideIdx + 1} / {props.img.length}</div>
+            <div className='slideshow_idx'>{slideIdx + 1} / {props.img.length}</div>
             </>}
         </div>
     )

@@ -52,20 +52,10 @@
             
             &_active {
                 font-family: 'Montserrat-Medium';
-                background: hsla(0, 100%, 82%, 0.2);
                 border-radius: 0.3rem;
                 padding: 0.2rem 0.7rem;
             }
 
-            &_inactive {
-                transition: all 350ms ease-in-out;
-                &:hover {
-                    font-family: 'Montserrat-Medium';
-                    background: hsla(0, 100%, 82%, 0.2);
-                    border-radius: 0.3rem;
-                    padding: 0.2rem 0.7rem;
-                }
-            }
         }
     }
 }
