@@ -1,14 +1,22 @@
 import React from 'react';
-import {useParams } from 'react-router-dom';
+import {useParams, Route, Routes  } from 'react-router-dom';
 import housings from '../../API/logements.json';
 import Collapse from '../Layout/Collapse';
 import Gallery from '../Layout/Slides';
 import RatingScale from './RatingScale';
+import Error404 from '../NoMatch/Error404';
 
 const HousingPage = () => {
 
     const { id } = useParams()
     const housing = housings.find(housing => housing.id === id)
+    if (housing === undefined) { 
+        return  <Routes>
+            <Route path="*" element={<Error404/>}/> 
+            </Routes>
+    }
+
+
 
     return (
         <section key={housing.id} className='house_page'>
